@@ -1,13 +1,12 @@
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
-const ejs = require("ejs");
 const path = require("path");
 
 // require the users router
 let usersRouter = require("./routes/users");
 
-// connected to mongoDB
+// connect to MongoDB
 mongoose
   .connect("mongodb://localhost/UserDiary", {
     useNewUrlParser: true,
@@ -38,7 +37,7 @@ app.get("/", (req, res) => {
   res.send("Welcome");
 });
 
-// error handler middleware.
+// error handler middleware
 app.use((req, res, next) => {
   res.status(404).send("Page Not Found");
 });
