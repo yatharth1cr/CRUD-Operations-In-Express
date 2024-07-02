@@ -7,3 +7,4 @@
 ### 3. Create Operation in CRUD
 - **Prepare Express Application**
 - **Create Operation** (ExplainWithCode)
+### 4. Read Operation in CRUD
