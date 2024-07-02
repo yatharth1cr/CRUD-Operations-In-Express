@@ -1,11 +1,11 @@
-// requires
 const express = require("express");
 const mongoose = require("mongoose");
 const logger = require("morgan");
 const ejs = require("ejs");
 const path = require("path");
+const userRouter = require("./routes/users");
 
-// connected to mongoDB
+// connected to MongoDB
 mongoose
   .connect("mongodb://localhost/User", {
     useNewUrlParser: true,
@@ -14,42 +14,41 @@ mongoose
   .then(() => {
     console.log("Connected to database");
   })
-  .catch((err) => {
-    console.log(err);
-  });
+
+  .catch((err) => console.log("Connection error:", err));
 
 // instantiate the express app
 const app = express();
 
-// middleware
+// Middleware
 app.use(logger("dev"));
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(express.static(__dirname + "public"));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, "public")));
 
-// routes middleware
-app.use("/", userRouter);
+// Routes middleware
+app.use("/users", userRouter);
 
 // setup engine
 app.set("view engine", "ejs");
-app.set();
+app.set("views", path.join(__dirname, "views"));
 
-// routes
+// Root route
 app.get("/", (req, res) => {
-  console.log("Welcome");
+  res.send("Welcome to User Model");
 });
 
 // 404 handler
 app.use((req, res, next) => {
-  res.send("Page Not Found!");
+  res.status(404).send("Page Not Found!");
 });
 
 // error handler middleware
 app.use((err, req, res, next) => {
-  res.send(err);
+  res.status(500).send(err.message);
 });
 
 // server listener
 app.listen(3000, () => {
-  console.log("Server is listening at port 3k");
+  console.log("Server is listening at port 3000");
 });
