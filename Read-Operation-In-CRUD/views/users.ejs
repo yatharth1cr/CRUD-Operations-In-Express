@@ -9,7 +9,9 @@
   <body>
     <h1>List of Users</h1>
     <ul>
-      <li><a href="#">hello name</a></li>
+      <% users.forEach(user => { %>
+      <li><a href="/users/<%= user._id %>"><%= user.name %></a></li>
+      <% }) %>
     </ul>
   </body>
 </html>
