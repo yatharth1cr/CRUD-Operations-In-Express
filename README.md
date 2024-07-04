@@ -4,7 +4,11 @@
 - **Views in Express** (ExplainWithCode)
 - **Routing Conventions** (ExplainWithCode)
 ### 2. Assignment-I
+- **ExplainWithCode**
 ### 3. Create Operation in CRUD
 - **Prepare Express Application**
 - **Create Operation** (ExplainWithCode)
 ### 4. Read Operation in CRUD
+- **Read/Query Operation**
+- **Read Operation** (ExplainWithCode)
+### 5. Update Operation in CRUD
