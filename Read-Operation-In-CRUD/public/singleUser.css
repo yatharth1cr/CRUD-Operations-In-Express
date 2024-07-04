@@ -1,0 +1,40 @@
+body {
+  color: #fff;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #771512;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.user-details {
+  background-color: #771512;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(216, 9, 9, 0.1);
+  margin: 20px auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+}
+
+.user-details p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+a {
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+  color: #771512;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
