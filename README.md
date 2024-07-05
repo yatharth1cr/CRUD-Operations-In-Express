@@ -12,4 +12,4 @@
 - **Read/Query Operation**
 - **Read Operation** (ExplainWithCode)
 ### 5. Update Operation in CRUD
-- Update Operation
+- **Update Operation** (ExplainWithCode)
