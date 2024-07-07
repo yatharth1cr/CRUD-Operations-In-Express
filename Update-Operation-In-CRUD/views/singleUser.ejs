@@ -7,11 +7,23 @@
     <link rel="stylesheet" href="/singleUser.css" />
   </head>
   <body>
-    <h1>User Details</h1>
+    <header>
+      <!-- <h1>USERS</h1> -->
+      <h1>User Details</h1>
+      <button id="new-user-btn">
+        <a href="/users/new">Create New User</a>
+      </button>
+    </header>
     <div class="user-details">
-      <p><strong>Name:</strong> <%= user.name %></p>
-      <p><strong>Email:</strong> <%= user.email %></p>
-      <p><strong>Age:</strong> <%= user.age %></p>
+      <div>
+        <p><strong>Name:</strong> <%= user.name %></p>
+        <p><strong>Email:</strong> <%= user.email %></p>
+        <p><strong>Age:</strong> <%= user.age %></p>
+      </div>
+      <div>
+        <a href="/users/<%= user._id %>/edit" class="edit btn">Edit</a
+        ><a href="/users/<%= user._id %>/delete" class="delete btn">Delete</a>
+      </div>
     </div>
     <a href="/users">Back to Users List</a>
   </body>
