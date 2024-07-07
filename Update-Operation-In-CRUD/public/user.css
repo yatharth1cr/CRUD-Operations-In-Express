@@ -51,13 +51,11 @@ li a:hover {
 
 #new-user-btn {
   background-color: #fff;
-  /* padding: 5px px; */
   width: 10rem;
-  height: 3rem;
+  height: 4rem;
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
-  /* margin: 20px 0 0 550px; */
 }
 
 #new-user-btn:hover {

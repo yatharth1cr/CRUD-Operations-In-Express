@@ -19,18 +19,6 @@ router.get("/", (req, res, next) => {
     });
 });
 
-// Route to display a singleUsers
-router.get("/:id", (req, res, next) => {
-  var id = req.params.id;
-  User.findById(id)
-    .then((user) => {
-      res.render("singleUser", { user: user });
-    })
-    .catch((err) => {
-      return next(err);
-    });
-});
-
 // Route to handle the creation of a new user
 router.post("/", (req, res, next) => {
   User.create(req.body)
@@ -42,12 +30,24 @@ router.post("/", (req, res, next) => {
     });
 });
 
+// Route to display a singleUsers
+router.get("/:id", (req, res, next) => {
+  var id = req.params.id;
+  User.findById(id)
+    .then((user) => {
+      res.render("singleUser", { user });
+    })
+    .catch((err) => {
+      return next(err);
+    });
+});
+
 // Route to handle update user
 router.get("/:id/edit", (req, res, next) => {
   var id = req.params.id;
   User.findById(id)
     .then((user) => {
-      res.render("editUserForm", { user });
+      res.render("editUserForm", { user: user });
     })
     .catch((err) => {
       return next(err);
@@ -55,6 +55,15 @@ router.get("/:id/edit", (req, res, next) => {
 });
 
 // Route to handle formupdated data
-router.put("/:id");
+router.post("/:id", (req, res, next) => {
+  var id = req.params.id;
+  User.findByIdAndUpdate(id, req.body, { new: true })
+    .then((user) => {
+      res.redirect("/users/" + id);
+    })
+    .catch((err) => {
+      return next(err);
+    });
+});
 
 module.exports = router;

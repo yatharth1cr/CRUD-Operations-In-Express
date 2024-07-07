@@ -30,12 +30,12 @@ form input {
 }
 
 form input:focus {
-  border-color: #771512;
+  border-color: darkmagenta;
   outline: none;
 }
 
 form button {
-  background-color: #731815;
+  background-color: darkmagenta;
   color: white;
   border: none;
   padding: 10px;
@@ -45,7 +45,7 @@ form button {
 }
 
 form button:hover {
-  background-color: #771512;
+  background-color: black;
 }
 
 h1 {
@@ -57,7 +57,7 @@ h1 {
 a {
   color: #fff;
   text-decoration: none;
-  background-color: #771512;
+  background-color: darkmagenta;
   padding: 1rem;
   border-radius: 0 1rem;
 }
