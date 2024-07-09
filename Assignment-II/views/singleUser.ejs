@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= user.name %>'s Details</title>
+    <link rel="stylesheet" href="/singleUser.css" />
+  </head>
+  <body>
+    <header>
+      <h1>User Details</h1>
+      <button id="new-user-btn">
+        <a href="/usersdiary/new">Create New User</a>
+      </button>
+    </header>
+    <div class="user-details">
+      <div>
+        <p><strong>Name:</strong> <%= user.name %></p>
+        <p><strong>Email:</strong> <%= user.email %></p>
+        <p><strong>Age:</strong> <%= user.age %></p>
+        <p><strong>Bio:</strong> <%= user.bio %></p>
+      </div>
+      <div>
+        <a href="/usersdiary/<%= user._id %>/edit" class="edit btn">Edit</a
+        ><a href="/usersdiary/<%= user._id %>/delete" class="delete btn"
+          >Delete</a
+        >
+      </div>
+    </div>
+    <a href="/usersdiary">Back to Users List</a>
+  </body>
+</html>
