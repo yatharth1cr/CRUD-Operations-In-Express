@@ -1,0 +1,95 @@
+body {
+  color: #fff;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #cf4816;
+  display: flex;
+  padding: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+}
+/* h1 {
+    color: #cf4816;
+    text-align: center;
+    margin-top: 20px;
+  } */
+
+.user-details {
+  background-color: #cf4816;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(216, 9, 9, 0.1);
+  margin: 20px auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-details p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+a {
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+  color: #cf4816;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 60px;
+}
+
+.edit {
+  background-color: green;
+}
+
+.delete {
+  background-color: black;
+}
+
+.edit-btn:hover {
+  background-color: #632b1a;
+}
+
+#new-user-btn {
+  background-color: #fff;
+  width: 10rem;
+  height: 4rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+#new-user-btn:hover {
+  background-color: #bdb9b9;
+}
+
+#new-user-btn a {
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #cf4816;
+}

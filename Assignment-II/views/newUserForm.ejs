@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New User Form</title>
+    <link rel="stylesheet" href="/newUserForm.css" />
+  </head>
+  <body>
+    <header>
+      <h1>User Form</h1>
+      <a href="/usersdiary">Back To User</a>
+    </header>
+    <form action="/usersdiary/new" method="post">
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="number" name="age" placeholder="Age" required />
+      <input type="text" name="bio" placeholder="Bio" required />
+      <button type="submit">Add New User</button>
+    </form>
+  </body>
+</html>
